@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "title": "John Doe | Full-Stack Developer",
+    "description": "Full-stack developer based in Tokyo, Japan. Specializing in React, Laravel, and modern web technologies."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Full-Stack Developer",
+    "tagline": "Building modern web applications with clean code and thoughtful design",
+    "viewWork": "View My Work",
+    "downloadResume": "Resume",
+    "available": "Open to new opportunities"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me",
+    "introduction": "I'm a passionate full-stack developer with over 5 years of experience building web applications. I enjoy turning complex problems into simple, beautiful, and intuitive solutions.",
+    "whatIDo": {
+      "title": "What I Do",
+      "description": "I specialize in building modern web applications using React, Next.js, Laravel, and other cutting-edge technologies. From frontend interfaces to backend APIs, I deliver complete solutions that scale."
+    },
+    "lookingFor": {
+      "title": "What I'm Looking For",
+      "description": "I'm seeking opportunities to work on challenging projects with teams that value code quality, collaboration, and continuous learning. Remote-friendly positions in Japan or worldwide."
+    },
+    "location": "Tokyo, Japan"
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies I work with",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "DevOps & Tools"
+    },
+    "yearsExperience": "{years} years"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some things I've built",
+    "viewLive": "Live Demo",
+    "viewCode": "Source Code",
+    "ecommerce": {
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce platform with product management, shopping cart, and Stripe payment integration."
+    },
+    "taskmanager": {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, team workspaces, and analytics dashboard."
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "A bilingual portfolio website built with Next.js 16, featuring modern design and smooth animations."
+    },
+    "api": {
+      "title": "RESTful API Service",
+      "description": "A scalable RESTful API built with Laravel, featuring authentication, rate limiting, and comprehensive documentation."
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "present": "Present",
+    "exp1": {
+      "position": "Senior Full-Stack Developer",
+      "description": "Lead developer for enterprise web applications",
+      "achievement1": "Led development of 5 major client projects with 100% on-time delivery",
+      "achievement2": "Reduced deployment time by 60% through CI/CD pipeline optimization",
+      "achievement3": "Mentored 3 junior developers and conducted code reviews"
+    },
+    "exp2": {
+      "position": "Full-Stack Developer",
+      "description": "Web application development for various clients",
+      "achievement1": "Developed and maintained 10+ web applications using Laravel and React",
+      "achievement2": "Improved application performance by 40% through database optimization",
+      "achievement3": "Implemented automated testing reducing bug reports by 50%"
+    },
+    "exp3": {
+      "position": "Junior Developer",
+      "description": "Entry-level development role",
+      "achievement1": "Built responsive websites for small business clients",
+      "achievement2": "Learned agile development methodologies and version control",
+      "achievement3": "Contributed to open-source projects"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "cta": "I'm currently open to new opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "chatButton": "Start a Chat",
+    "lineButton": "Connect on LINE",
+    "emailButton": "Send Email",
+    "resumeButton": "Download Resume"
+  },
+  "chat": {
+    "greeting": "Hi! Thanks for visiting. What brings you here?",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "options": {
+      "job": "Job opportunity",
+      "collaboration": "Collaboration",
+      "browsing": "Just browsing"
+    },
+    "responses": {
+      "job": "Great! I'm open to new opportunities. Would you like to connect on LINE to discuss further?",
+      "collaboration": "Sounds interesting! What kind of collaboration are you thinking about?",
+      "browsing": "No problem! Feel free to explore. Let me know if you have any questions."
+    },
+    "connectLine": "Connect on LINE",
+    "tellMore": "Tell me more"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with Next.js and deployed on Vercel"
+  },
+  "common": {
+    "present": "Present",
+    "years": "years",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
