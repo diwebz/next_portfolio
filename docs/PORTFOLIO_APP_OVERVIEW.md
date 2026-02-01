@@ -405,6 +405,12 @@ The website supports **English** (default) and **Japanese** using `next-intl`.
 /ja#about   → Japanese about section
 ```
 
+### Font-family usage
+
+To change fonts later, edit these two files:
+  1. app/[locale]/layout.tsx — Lines 16-28: Change the font imports and configuration
+  2. app/globals.css — Line 29: Update the --font-sans CSS variable to reference your new font variables
+
 ### Configuration
 
 #### routing.ts

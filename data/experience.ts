@@ -4,7 +4,6 @@ export const experiences: Experience[] = [
   {
     id: 'exp-1',
     company: 'Tech Solutions Inc.',
-    companyLogo: '/images/companies/techsolutions.png',
     positionKey: 'experience.exp1.position',
     location: 'Tokyo, Japan',
     startDate: '2022-04',
@@ -20,7 +19,6 @@ export const experiences: Experience[] = [
   {
     id: 'exp-2',
     company: 'Digital Agency Co.',
-    companyLogo: '/images/companies/digitalagency.png',
     positionKey: 'experience.exp2.position',
     location: 'Tokyo, Japan',
     startDate: '2020-01',
@@ -36,7 +34,6 @@ export const experiences: Experience[] = [
   {
     id: 'exp-3',
     company: 'StartUp Labs',
-    companyLogo: '/images/companies/startuplabs.png',
     positionKey: 'experience.exp3.position',
     location: 'Osaka, Japan',
     startDate: '2018-04',

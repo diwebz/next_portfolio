@@ -2,19 +2,29 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Roboto, Noto_Sans_JP } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import '../globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+/**
+ * Font configuration — change fonts here if needed:
+ * - `roboto`: Used for English text (Latin subset)
+ * - `notoSansJP`: Used for Japanese text (Latin + Japanese subsets)
+ * Both fonts are loaded via next/font/google for optimal performance.
+ */
+const roboto = Roboto({
+  variable: '--font-roboto',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const notoSansJP = Noto_Sans_JP({
+  variable: '--font-noto-sans-jp',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  display: 'swap',
 });
 
 type Props = {
@@ -65,9 +75,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${roboto.variable} ${notoSansJP.variable} antialiased`}
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>

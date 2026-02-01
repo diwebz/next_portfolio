@@ -25,9 +25,9 @@
   --color-background: #ffffff;
   --color-foreground: #0f172a;
 
-  /* Fonts */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* Fonts (fallback — overridden on body where next/font variables are available) */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
 
   /* Border radius */
   --radius-sm: 0.25rem;
@@ -148,7 +148,11 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang="ja"] body {
+  font-family: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Glassmorphism utility classes */
@@ -161,11 +165,6 @@ body {
 .dark .glass {
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Focus visible styles */

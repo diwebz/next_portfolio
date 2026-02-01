@@ -6,7 +6,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 import { featuredProjects } from '@/data/projects';
 import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
+import { ButtonLink } from '@/components/ui/Button';
 
 export function Projects() {
   const t = useTranslations();
@@ -69,28 +69,27 @@ export function Projects() {
                 {/* Links */}
                 <div className="flex gap-3">
                   {project.liveUrl && (
-                    <Button size="sm" asChild>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        {t('projects.viewLive')}
-                      </a>
-                    </Button>
+                    <ButtonLink
+                      size="sm"
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      {t('projects.viewLive')}
+                    </ButtonLink>
                   )}
                   {project.githubUrl && (
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        {t('projects.viewCode')}
-                      </a>
-                    </Button>
+                    <ButtonLink
+                      variant="outline"
+                      size="sm"
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      {t('projects.viewCode')}
+                    </ButtonLink>
                   )}
                 </div>
               </div>

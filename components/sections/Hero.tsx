@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { ArrowDown, Download, Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/Button';
+import { Button, ButtonLink } from '@/components/ui/Button';
 import { profile } from '@/data/profile';
 import type { Locale } from '@/types';
 
@@ -72,12 +72,10 @@ export function Hero() {
               <Button size="lg" onClick={scrollToProjects}>
                 {t('viewWork')}
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href={profile.resume[locale]} download>
-                  <Download className="w-4 h-4 mr-2" />
-                  {t('downloadResume')}
-                </a>
-              </Button>
+              <ButtonLink variant="outline" size="lg" href={profile.resume[locale]} download>
+                <Download className="w-4 h-4 mr-2" />
+                {t('downloadResume')}
+              </ButtonLink>
             </div>
 
             {/* Social Links */}

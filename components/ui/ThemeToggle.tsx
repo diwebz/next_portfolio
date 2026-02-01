@@ -1,14 +1,23 @@
 'use client';
 
+import { useSyncExternalStore } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Monitor } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+// Returns false on the server, true on the client after hydration.
+// Avoids useState+useEffect and prevents hydration mismatches.
+const subscribe = () => () => {};
+function useMounted() {
+  return useSyncExternalStore(subscribe, () => true, () => false);
+}
 
 interface ThemeToggleProps {
   className?: string;
 }
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
+  const mounted = useMounted();
   const { theme, setTheme, resolvedTheme } = useTheme();
 
   const cycleTheme = () => {
@@ -21,7 +30,6 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     }
   };
 
-  // Use resolvedTheme for icon display to handle SSR
   const displayTheme = theme === 'system' ? 'system' : resolvedTheme;
 
   return (
@@ -32,12 +40,16 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         className
       )}
       aria-label="Toggle theme"
-      suppressHydrationWarning
     >
-      {displayTheme === 'light' && <Sun className="h-4 w-4" />}
-      {displayTheme === 'dark' && <Moon className="h-4 w-4" />}
-      {displayTheme === 'system' && <Monitor className="h-4 w-4" />}
-      {!displayTheme && <Sun className="h-4 w-4" />}
+      {!mounted ? (
+        <Sun className="h-4 w-4" />
+      ) : displayTheme === 'dark' ? (
+        <Moon className="h-4 w-4" />
+      ) : displayTheme === 'system' ? (
+        <Monitor className="h-4 w-4" />
+      ) : (
+        <Sun className="h-4 w-4" />
+      )}
     </button>
   );
 }
